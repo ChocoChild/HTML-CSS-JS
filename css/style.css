@@ -36,9 +36,11 @@ body {
 /* Header Start */
 
 .header {
+    overflow: hidden;
     min-height: 940px;
     padding-top: 44px;
-    background: linear-gradient(132.05deg, #428E5F -17.38%, #112120 78.4%)
+    background: linear-gradient(132.05deg, #428E5F -17.38%, #112120 78.4%);
+    color: #fff;
 }
 
 .header a {
@@ -62,9 +64,27 @@ body {
     margin-bottom: 86px;
 }
 
+.header__row {
+    display: flex;
+}
+
 .header__content {
     max-width: 592px;
+    position: relative;
+    z-index: 1;
 }
+
+.header__img {
+    position: relative;
+    flex-grow: 1;
+}
+
+.header__img img {
+    max-height: 900px;
+    position: absolute;
+    top: -160px;
+    right: -80px;
+}   
 
 /* Header End */
 
@@ -145,6 +165,53 @@ body {
 }
 
 .btn:active {
+    position: relative;
+    top: 1px;
+}
+
+/* Header Content */
+
+.header__badge {
+    display: inline-block;
+    margin-bottom: 7px;
+    padding: 11px 30px;
+    font-size: 15px;
+    font-weight: 500;
+
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+}
+
+.header__title {
+    margin-bottom: 30px;
+    font-size: 55px;
+    font-weight: 500;
+}
+
+.header__text{
+    margin-bottom: 68px;
+    font-size: 25px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.header__btn {
+    display: inline-block;
+    padding: 27px 48px;
+
+    font-size: 25px;
+    font-weight: 600;
+
+    background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%);
+    border-radius: 27px;
+}
+
+.header__btn:hover{
+    color: #dfdf59;
+    transition: color 0.2s ease-in;
+}
+
+.header__btn:active {
     position: relative;
     top: 1px;
 }
