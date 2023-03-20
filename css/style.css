@@ -4,6 +4,7 @@
     --container-width: 1270px;
     --container-padding: 15px;
     --secondary: rgba(15, 31, 28, 0.5);
+    --orange: #FF7C4E;
 }
 
 body {
@@ -103,12 +104,12 @@ body {
     display: flex;
     column-gap: 80px;
     font-size: 15;
-    font-weight: 500;
-    
+    font-weight: 500;  
 }
 
 .nav__list a {
     position: relative;
+    text-decoration: none;
 }
 
 .nav__list a.active::after,
@@ -123,6 +124,16 @@ body {
     height: 4px;
     background-color: #c4c4c4;
     border-radius: 50px;
+}
+
+.nav__list.nav__list--footer a.active::after,
+.nav__list.nav__list--footer a:hover::after {
+    display: none;
+}
+
+.nav__list.nav__list--footer a.active,
+.nav__list.nav__list--footer a:hover {
+    color: var(--orange);
 }
 
 .nav__login {
@@ -145,30 +156,13 @@ body {
     font-weight: 700;
 }
 
-/* Botton */
-
-.btn {
+.logo a {
+    color: inherit !important;
     text-decoration: none;
-    display: inline-block;
-    padding: 25px 45px;
-
-    font-size: 20px;
-    font-weight: 600;
-    color: #fff;
-
-
-    background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%), #FFFFFF;
-    border-radius: 27px;
 }
 
-.btn:hover{
-    color: #dfdf59;
-    transition: color 0.2s ease-in;
-}
-
-.btn:active {
-    position: relative;
-    top: 1px;
+.logo--footer {
+    color: var(--orange);
 }
 
 /* Header Content */
@@ -195,27 +189,6 @@ body {
     font-size: 25px;
     font-weight: 700;
     color: rgba(255, 255, 255, 0.5);
-}
-
-.header__btn {
-    display: inline-block;
-    padding: 27px 48px;
-
-    font-size: 25px;
-    font-weight: 600;
-
-    background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%);
-    border-radius: 27px;
-}
-
-.header__btn:hover{
-    color: #dfdf59;
-    transition: color 0.2s ease-in;
-}
-
-.header__btn:active {
-    position: relative;
-    top: 1px;
 }
 
 /* Destinations */
@@ -474,27 +447,61 @@ body {
     color: var(--secondary);
  }
 
- .subscribe-form__btn {
+/* Footer */
+
+.footer {
+    padding: 56px 0 74px;
+}
+
+.footer a {
+    color: var(--secondary);
+
+}
+
+/* Buttons */
+
+.btn {
     text-decoration: none;
     display: inline-block;
-    padding: 34px 86px;
+    padding: 25px 45px;
 
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
-    color: #fff;
-    border: none;
+    color: #fff !important;
 
 
     background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%), #FFFFFF;
-    border-radius: 35px;
+    border-radius: 27px;
 }
 
-.subscribe-form__btn:hover{
-    color: #dfdf59;
+.btn:hover{
+    color: #dfdf59 !important;
     transition: color 0.2s ease-in;
 }
 
-.subscribe-form__btn:active {
+.btn:active {
     position: relative;
     top: 1px;
 }
+
+.btn-login {
+    padding: 13px 44px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 100px;
+}
+
+.btn--header {
+    padding: 27px 48px;
+    font-size: 25px;
+}
+
+.btn--subscribe {
+    text-decoration: none;
+    padding: 34px 86px;
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 35px;
+    border: none;
+}
+
